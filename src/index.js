@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import {Greetingnames, UserCards} from './Greetingnames'
+import Product, {Navbar} from './Product'
 const root = ReactDOM.createRoot(document.getElementById("root"));
 //root.render(<h1>Hello Bonito Mundo</h1>)
 
@@ -86,7 +88,7 @@ root.render(<div><Greetingnames/>
 <Greetingnames/>
 <Greetingnames/></div>);}*/
 
-function Greetingnames() {
+/*function Greetingnames() {
   function add(x,y) {
     return x+y;}
   return (
@@ -96,7 +98,16 @@ root.render(<><Greetingnames/>
 <Greetingnames/>
 <Greetingnames/>
 <Greetingnames/>
-<Greetingnames/></>);
+<Greetingnames/></>);*/
 
+
+
+root.render(<><Greetingnames/>
+<Greetingnames/>
+<UserCards/>
+<Product/>
+<Navbar/>
+<Greetingnames/>
+<Greetingnames/></>);
 
 
