@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import {Greetingnames, UserCards} from './Greetingnames'
 import Product, {Navbar} from './Product'
+import {Button} from './Button'
+import { toBeRequired } from "@testing-library/jest-dom/dist/matchers";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 //root.render(<h1>Hello Bonito Mundo</h1>)
 
@@ -124,7 +126,7 @@ root.render(<><Greetingnames/>
   <Greetingnames title="hola CSS"/>
   <Greetingnames title="hola React"/></>);*/
 
-root.render(<>
+/* root.render(<>
 <UserCards name= "Romulo" 
 amount= {3000}  
 married={true} 
@@ -144,3 +146,32 @@ greet={function () { alert ('Hello')}}/>
 
 
 </>);
+ */
+
+/* root.render(<>
+<Button text= 'Click me'/>
+<Button text= 'Pay'/>
+<Button text= 'Go to'/>
+<Button text= 'Go to'/>
+<Button text= '3000'/>
+<Button text= {true}/>
+</>)
+ */
+
+/* root.render(<>
+  <Button text= 'Click me'/>
+  <Button text= 'Pay'/>
+  <Button text= ' '/>
+  <Button text= 'Go to'/>
+  <Button text= '3000'/>
+  <Button text= {[1,2,3]}/>
+  </>) */
+
+root.render(<>
+  <Button text= 'Click me'/>
+  <Button text= 'Pay'/>
+  <Button text= ' ' name= 'Joe'/>
+  <Button text= 'Go to'/>
+  <Button text= '3000'/>
+  <Button text= {[1,2,3]}/>
+  </>)
