@@ -102,12 +102,45 @@ root.render(<><Greetingnames/>
 
 
 
-root.render(<><Greetingnames/>
+/*root.render(<><Greetingnames/>
 <Greetingnames/>
 <UserCards/>
 <Product/>
 <Navbar/>
 <Greetingnames/>
-<Greetingnames/></>);
+<Greetingnames/></>);*/
 
 
+/*root.render(<><Greetingnames title="hola"/>
+  <Greetingnames x="bye"/>
+  <Greetingnames y= {30}/>
+  <Greetingnames z={true}/>
+  <Greetingnames a={[1,2,3]}/></>);*/
+
+
+/*root.render(<><Greetingnames title="hola MYSQL" name="Juan"/>
+  <Greetingnames title="hola Javascript" name="David"/>
+  <Greetingnames title="hola Html"/>
+  <Greetingnames title="hola CSS"/>
+  <Greetingnames title="hola React"/></>);*/
+
+root.render(<>
+<UserCards name= "Romulo" 
+amount= {3000}  
+married={true} 
+points= {[99, 33.3, 22.2]} 
+address= {{street: '123 Main Street',
+city: 'New York'}}
+greet={function () { alert ('Hello')}}
+
+/>
+<UserCards name= "Remo" 
+amount= {2500}  
+married={true} 
+points= {[98, 33.4, 20.2]} 
+address= {{street: '123 Yoga',
+city: 'Los Angeles'}}
+greet={function () { alert ('Hello')}}/>
+
+
+</>);
