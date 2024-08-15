@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import {Greetingnames, UserCards} from './Greetingnames'
 import Product, {Navbar} from './Product'
 import {Button} from './Button'
+import {TaskCard}  from './Task'
 import { toBeRequired } from "@testing-library/jest-dom/dist/matchers";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 //root.render(<h1>Hello Bonito Mundo</h1>)
@@ -167,11 +168,15 @@ greet={function () { alert ('Hello')}}/>
   <Button text= {[1,2,3]}/>
   </>) */
 
-root.render(<>
+/* root.render(<>
   <Button text= 'Click me'/>
   <Button text= 'Pay'/>
   <Button text= ' ' name= 'Joe'/>
   <Button text= 'Go to'/>
   <Button text= '3000'/>
   <Button text= {[1,2,3]}/>
+  </>) */
+
+root.render(<>
+  <TaskCard ready={true}/>
   </>)
