@@ -265,6 +265,41 @@ alert('enviado')}}>
   <button>Send</button> 
   </form>
   </>); */
+
+
+const user = [{
+id: 1,
+name: "romulo",
+images: "https://robohash.org/romulo"},
+
+{id: 2,
+  name: "remo",
+  images: "https://robohash.org/ecuador",
+}
+,
+{id: 3,
+  name: "ecuador",
+  images: "https://robohash.org/colombia",
+}]
+
+  /* root.render(<>
+  {user.map ((user, i) => {
+return <h1 key='i'>{user.name}</h1>
+  })}
   
-  root.render(<><Posts/>
+  </>)
+ */
+/* root.render(<>
+  {user.map ((user, i) => {
+return <h1 key={i}>{user.name}</h1>
+  })}
+  
+  </>) */
+
+root.render(<>
+  {user.map ((user, i) => {
+return (<div key={i}> <h1>{user.name}</h1>
+<img src={user.images}/> </div>);
+  })}
+  
   </>)
