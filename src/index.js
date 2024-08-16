@@ -5,6 +5,7 @@ import Product, {Navbar} from './Product'
 import {Button} from './Button'
 import {TaskCard}  from './Task'
 import {Saludar} from './Saludar'
+import {Posts} from './Posts'
 import { toBeRequired } from "@testing-library/jest-dom/dist/matchers";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -257,10 +258,12 @@ console.log('enviado')}}>
   </>);*/
 
 
-root.render(<>
+/* root.render(<>
 <form onSubmit= {(e) => {e.preventDefault()
 alert('enviado')}}>
   <h1>Registro de usuario</h1> 
   <button>Send</button> 
   </form>
-  </>);
+  </>); */
+  
+  root.render(<><Posts/></>)
