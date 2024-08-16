@@ -51,7 +51,7 @@ Button.defaultProps = {
 name: 'Some user'
 } */
 
-import PropTypes from 'prop-types'
+/* import PropTypes from 'prop-types'
 export function Button({text, name}) {
    
   return <button onClick={function(){
@@ -61,10 +61,10 @@ export function Button({text, name}) {
 </button>
 }
 
-
-Button.propTypes = {
+ */
+/* Button.propTypes = {
     text: PropTypes.string.isRequired
 }
 Button.defaultProps = {
 name: 'Some user'
-}
+} */

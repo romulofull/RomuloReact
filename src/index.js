@@ -8,6 +8,11 @@ import {Saludar} from './Saludar'
 import { toBeRequired } from "@testing-library/jest-dom/dist/matchers";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+/* const handleChange = (e) => {
+console.log(e.target.value)
+} */
+
 //root.render(<h1>Hello Bonito Mundo</h1>)
 
 /*function Greeting() {
@@ -179,8 +184,83 @@ greet={function () { alert ('Hello')}}/>
   <Button text= {[1,2,3]}/>
   </>) */
 
+/* root.render(<>
+  <TaskCard ready={true}/>
+  <Saludar/>
+  <Button text="Saludar"/>
+  <input onClick= {function(){
+    alert('input seleccionado')
+  }}/>
+  </>) */
+
+/* root.render(<>
+  <TaskCard ready={true}/>
+  <Saludar/>
+  <Button text="Saludar"/>
+  <input onChange= {function(){
+    console.log ('escribiendo en el Input')
+  }}/>
+  </>)
+ */
+
+/* root.render(<>
+  <TaskCard ready={true}/>
+  <Saludar/>
+  <Button text="Saludar"/>
+  <input id="hola" onChange= {function(e){
+    console.log (e.target.value)
+  }}/>
+  </>) */
+
+/* root.render(<>
+  <TaskCard ready={true}/>
+  <Saludar/>
+  <Button text="Saludar"/>
+  <input id="hola" onChange= {(e) => {
+    console.log (e.target.value)
+  }}/>
+  </>) */
+
+/* root.render(<>
+  <TaskCard ready={true}/>
+  <Saludar/>
+  <Button text="Saludar"/>
+  <input id="hola" onChange= {handleChange}/>
+  </>); */
+/* 
 root.render(<>
   <TaskCard ready={true}/>
   <Saludar/>
   <Button text="Saludar"/>
-  </>)
+  <input id="hola" onDoubleClick= {() => console.log ("double click")}/>
+  </>); */
+
+/* root.render(<>
+  <TaskCard ready={true}/>
+  <Saludar/>
+  {<Button text="Saludar"/> } 
+<form onSubmit= {() => console.log("enviando datos del formulario")}>
+  <h1>Registro de usuario</h1> 
+  <button>Send</button> 
+  </form>
+  </>);  */
+ 
+/*root.render(<>
+  {/* <TaskCard ready={true}/>
+  <Saludar/> }*/
+/*   <Button text="Saludar"/>  */
+/*<form onSubmit= {(e) => {e.preventDefault()
+console.log('enviado')}}>
+  <h1>Registro de usuario</h1> 
+  <button>Send</button> 
+  </form>
+  </>);*/
+
+
+root.render(<>
+<form onSubmit= {(e) => {e.preventDefault()
+alert('enviado')}}>
+  <h1>Registro de usuario</h1> 
+  <button>Send</button> 
+  </form>
+  </>);
