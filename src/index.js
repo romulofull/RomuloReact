@@ -314,7 +314,7 @@ return (
   <Counter/>
     </>); */
 
-function Counter() {
+/* function Counter() {
   const [counter, setCounter] = useState(10);
   return (
     <div>
@@ -331,3 +331,19 @@ root.render(
     <Counter />
   </>
 );
+ */
+function Counter() {
+  const [mensaje, setMensaje] = useState('');    //string vacio.
+  return (
+    <div>
+      <input onChange={e => setMensaje (e.target.value)}/>
+   <button onClick= {() => {alert ('El mensaje es '+  mensaje)}}>Save</button></div>
+  )
+}
+
+root.render(
+  <>
+    <Counter />
+  </>
+);
+
