@@ -182,4 +182,5 @@ greet={function () { alert ('Hello')}}/>
 root.render(<>
   <TaskCard ready={true}/>
   <Saludar/>
+  <Button text="Saludar"/>
   </>)
