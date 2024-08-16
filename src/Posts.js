@@ -14,7 +14,6 @@ return <button onClick= {() => {
 Traer datos </button>
 } */
 
-
 //*FETCH API
 
 /* export const Posts= () => {
@@ -26,12 +25,20 @@ Traer datos </button>
     Traer datos </button>
     }
  */
-    export const Posts= () => {
-        return <button onClick= {() => {
-            fetch('https://jsonplaceholder.typicode.xyz/posts')
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error(error))
-        }}>
-        Traer datos </button>
-        }
+import {VscBug, VscGlobe} from 'react-icons/vsc'
+export const Posts = () => {
+  return (
+    <button
+      onClick={() => {
+        fetch("https://jsonplaceholder.typicode.xyz/posts")
+          .then((response) => response.json())
+          .then((data) => console.log(data))
+          .catch((error) => console.error(error));
+      }}
+    >
+      <VscBug/>
+      <VscGlobe/>
+      Traer datos
+    </button>)
+
+};

@@ -266,4 +266,5 @@ alert('enviado')}}>
   </form>
   </>); */
   
-  root.render(<><Posts/></>)
+  root.render(<><Posts/>
+  </>)
