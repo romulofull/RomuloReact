@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import {Greetingnames, UserCards} from './Greetingnames'
-import Product, {Navbar} from './Product'
-import {Button} from './Button'
-import {TaskCard}  from './Task'
-import {Saludar} from './Saludar'
-import {Posts} from './Posts'
+import { Greetingnames, UserCards } from "./Greetingnames";
+import Product, { Navbar } from "./Product";
+import { Button } from "./Button";
+import { TaskCard } from "./Task";
+import { Saludar } from "./Saludar";
+import { Posts } from "./Posts";
 import { toBeRequired } from "@testing-library/jest-dom/dist/matchers";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -111,8 +111,6 @@ root.render(<><Greetingnames/>
 <Greetingnames/>
 <Greetingnames/></>);*/
 
-
-
 /*root.render(<><Greetingnames/>
 <Greetingnames/>
 <UserCards/>
@@ -121,13 +119,11 @@ root.render(<><Greetingnames/>
 <Greetingnames/>
 <Greetingnames/></>);*/
 
-
 /*root.render(<><Greetingnames title="hola"/>
   <Greetingnames x="bye"/>
   <Greetingnames y= {30}/>
   <Greetingnames z={true}/>
   <Greetingnames a={[1,2,3]}/></>);*/
-
 
 /*root.render(<><Greetingnames title="hola MYSQL" name="Juan"/>
   <Greetingnames title="hola Javascript" name="David"/>
@@ -245,7 +241,7 @@ root.render(<>
   <button>Send</button> 
   </form>
   </>);  */
- 
+
 /*root.render(<>
   {/* <TaskCard ready={true}/>
   <Saludar/> }*/
@@ -257,7 +253,6 @@ console.log('enviado')}}>
   </form>
   </>);*/
 
-
 /* root.render(<>
 <form onSubmit= {(e) => {e.preventDefault()
 alert('enviado')}}>
@@ -266,8 +261,7 @@ alert('enviado')}}>
   </form>
   </>); */
 
-
-const user = [{
+/* const user = [{
 id: 1,
 name: "romulo",
 images: "https://robohash.org/romulo"},
@@ -281,8 +275,8 @@ images: "https://robohash.org/romulo"},
   name: "ecuador",
   images: "https://robohash.org/colombia",
 }]
-
-  /* root.render(<>
+ */
+/* root.render(<>
   {user.map ((user, i) => {
 return <h1 key='i'>{user.name}</h1>
   })}
@@ -296,10 +290,44 @@ return <h1 key={i}>{user.name}</h1>
   
   </>) */
 
-root.render(<>
+/* root.render(<>
   {user.map ((user, i) => {
 return (<div key={i}> <h1>{user.name}</h1>
 <img src={user.images}/> </div>);
   })}
   
-  </>)
+  </>) */
+
+//*   names.map()   names.filter()    names.find()    names.reduce()    names.sort()
+
+/*   function Counter() {
+
+    const [ counter, setCounter] = useState(0)
+return (
+  <div>
+    <h1>Counter: {counter} </h1>
+    <button onClick= {() => {setCounter(100)}}> Sumar </button>
+  </div>
+)
+  }
+  root.render(<>
+  <Counter/>
+    </>); */
+
+function Counter() {
+  const [counter, setCounter] = useState(10);
+  return (
+    <div>
+      <h1>Counter: {counter} </h1>
+      <button onClick={() => setCounter(counter + 1)}> Sumar </button>
+      <button onClick={() => setCounter(counter - 1)}> Restar </button>
+      <button onClick={() => setCounter(1000)}> Reiniciar </button>
+    </div>
+  );
+}
+
+root.render(
+  <>
+    <Counter />
+  </>
+);
