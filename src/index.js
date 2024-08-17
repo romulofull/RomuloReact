@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { Greetingnames, UserCards } from "./Greetingnames";
 import Product, { Navbar } from "./Product";
@@ -17,6 +17,7 @@ console.log(e.target.value)
 //root.render(<h1>Hello Bonito Mundo</h1>)
 
 /*function Greeting() {
+
     return <div>
     <h1>Hola Mundo</h1>
     <p>lorem123</p></div>
@@ -332,18 +333,91 @@ root.render(
   </>
 );
  */
-function Counter() {
+
+/* function Counter() {
   const [mensaje, setMensaje] = useState('');    //string vacio.
   return (
     <div>
       <input onChange={e => setMensaje (e.target.value)}/>
    <button onClick= {() => {alert ('El mensaje es '+  mensaje)}}>Save</button></div>
-  )
+  )}
+root.render(
+  <>
+    <Counter /></>); */
+
+// USE EFFECT CADA VEZ QUE HAYAN CAMBIOS.
+/* function Counter() {
+  const [mensaje, setMensaje] = useState('');    //string vacio.
+useEffect(function () {
+  console.log('render')
+})
+
+
+  return (
+    <div>
+      <input onChange={e => setMensaje (e.target.value)}/>
+   <button onClick= {() => {alert ('El mensaje es '+  mensaje)}}>Save</button></div>)}
+root.render(
+  <>
+    <Counter />
+  </>); */
+
+//  USE EFFECT UNA SOLA VEZ.
+/* function Counter() {
+  const [mensaje, setMensaje] = useState('');    //string vacio.
+useEffect(function () {
+  console.log('render')
+}, [ ])
+  return (
+    <div>
+      <input onChange={e => setMensaje (e.target.value)}/>
+   <button onClick= {() => {alert ('El mensaje es '+  mensaje)}}>Save</button></div>)}
+root.render(
+  <>
+    <Counter />
+  </>);
+ */
+//  USE EFFECT UNA SOLA VEZ.
+
+/* function Counter() {
+  const [mensaje, setMensaje] = useState(""); //string vacio.
+  const [counter, setCounter] = useState(0);
+  useEffect(() => {
+    console.log("render");
+  }, []);
+
+  return (
+    <div>
+      <input onChange={(e) => setMensaje(e.target.value)} />
+      <button onClick={() => {alert("El mensaje es " + mensaje); }}>Save</button>
+      <hr />
+      <h1>Counter: {counter}</h1>
+      <button onClick={() => setCounter(counter + 1)}>Incrementar</button>
+    </div>
+  );
 }
 
 root.render(
   <>
+    {" "}
     <Counter />
   </>
-);
+); */
+// USE EFFECT . SOLO CUANDO EL BOTON DE AUMENTO
 
+function Counter() {
+  const [mensaje, setMensaje] = useState(""); //string vacio.
+  const [counter, setCounter] = useState(0);
+  useEffect(() => {
+    console.log("render");
+  }, [counter]);
+
+  return (<div>
+      <input onChange={(e) => setMensaje(e.target.value)} />
+      <button onClick={() => {alert("El mensaje es " + mensaje); }}>Save</button>
+      <hr />
+      <h1>Counter: {counter}</h1>
+      <button onClick={() => setCounter(counter + 1)}>Incrementar</button>
+    </div> );}
+
+root.render( <> {" "} <Counter /> </>);
